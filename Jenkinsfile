@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label "docker-slave"
+  }
   tools {
         nodejs "19.8.1"
     }
