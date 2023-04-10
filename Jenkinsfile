@@ -6,7 +6,6 @@ pipeline {
   stages {
       
     stage('Build') {
-      git branch: 'main', url: 'https://github.com/ismaeelhaider72/nodejs_jenkinsPipeline'
       steps {
         sh 'npm install'
       }
