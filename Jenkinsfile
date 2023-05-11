@@ -16,9 +16,15 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        sh 'echo hello'
-        sh 'node index.js &'
-        sh 'sleep 10s'
+        script {
+          def proc = background {
+            sh 'node index.js'
+          }
+          join(proc)
+        }
+//         sh 'echo hello'
+//         sh 'node index.js &'
+//         sh 'sleep 10s'
       }
     } 
    
