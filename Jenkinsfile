@@ -10,6 +10,7 @@ pipeline {
         sh 'echo hello-world'
         sh 'sleep 5s'
         sh 'npm install'
+        sh 'npm fund'
       }
     }  
     
