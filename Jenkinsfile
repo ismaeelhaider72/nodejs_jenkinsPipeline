@@ -9,7 +9,9 @@ pipeline {
       steps {
         sh 'echo hello-world'
         sh 'sleep 5s'
-        sh 'npm install --no-fund'
+        sh 'npm config set false --global'
+        sh 'npm config set fund false'
+        sh 'npm install'
       }
     }  
     
