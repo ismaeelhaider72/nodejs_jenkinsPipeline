@@ -13,7 +13,8 @@ pipeline {
          // installing
 //         sh 'npm install -g forever'
 //         sh 'node index.js'
-        sh 'nohup node index.js > /dev/null 2>&1 &'
+//         sh 'nohup node index.js > /dev/null 2>&1 &'
+           sh 'nohup node index.js > app.log 2>&1 &'
 //         sh 'ps -ef | grep node'
 //         sh 'node index.js'
 //         sh 'nohup node index.js &'
