@@ -16,11 +16,7 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        script {
-          def command = "nohup node index.js > output.log 2>&1 & echo $!"
-          def pid = sh(script: command, returnStdout: true).trim()
-          sh "echo Node.js command started with PID ${pid}"
-        }
+        sh 'node index.js > output.log 2>&1'
 //         sh 'echo hello'
 //         sh 'node index.js &'
 //         sh 'sleep 10s'
