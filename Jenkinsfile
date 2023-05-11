@@ -1,12 +1,13 @@
 pipeline {
   agent any
-  tools {
-        nodejs "nodejs"
-    }
+//   tools {
+//         nodejs "nodejs"
+//     }
   stages {
       
     stage('Build') {
       steps {
+        sh 'sudo apt-get update && sudo apt-get install -y nodejs npm'
         sh 'echo hello-world'
         sh 'npm config set false --global'
         sh 'npm config set fund false'
