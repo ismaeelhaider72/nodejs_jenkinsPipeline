@@ -11,12 +11,13 @@ pipeline {
         sh 'npm config set false --global'
         sh 'npm config set fund false'
         sh 'npm install'
+        sh 'npm install pm2 -g'
       }
     }  
     
     stage('Deploy') {
       steps {
-        sh 'nohup node index.js > output.log 2>&1 &'
+         sh 'pm2 start index.js'
 //         sh 'echo hello'
 //         sh 'node index.js &'
 //         sh 'sleep 10s'
