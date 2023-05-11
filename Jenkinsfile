@@ -1,16 +1,16 @@
 pipeline {
   agent {
-    label "docker-slave"
+    label any
   }
   tools {
-        nodejs "19.8.1"
+        nodejs "nodejs"
     }
   stages {
       
     stage('Build') {
       steps {
         sh 'echo hello-world'
-        sh 'sleep 50m'
+        sh 'sleep 5s'
         sh 'npm install'
       }
     }  
