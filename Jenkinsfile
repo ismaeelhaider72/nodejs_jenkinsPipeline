@@ -17,7 +17,8 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo hello'
-        sh 'node index.js &'    
+        sh 'node index.js &'
+        sh 'sleep 10s'
       }
     } 
    
