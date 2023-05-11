@@ -17,7 +17,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo hello'
-        sh 'nohup node index.js &'    
+        sh 'nohup node index.js'    
       }
     } 
    
