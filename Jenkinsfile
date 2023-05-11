@@ -22,12 +22,13 @@ pipeline {
       }
     }  
     
-//     stage('Deploy') {
-//       steps {
-//          sh 'echo hello'
-//          sh 'node index.js &'
-//       }
-//     } 
+    stage('Deploy') {
+      steps {
+         sh 'echo hello'
+         sh 'sleep 5s'
+         sh 'ps -ef | grep node'
+      }
+    } 
    
   }
 }
