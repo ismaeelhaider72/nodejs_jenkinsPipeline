@@ -16,11 +16,8 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        script {
-          def proc = background {
-            sh 'node index.js'
-          }
-          join(proc)
+        withEnv(['BUILD_ID=dontkillme']) {
+          sh 'nohup node index.js & disown'
         }
 //         sh 'echo hello'
 //         sh 'node index.js &'
