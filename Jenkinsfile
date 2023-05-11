@@ -11,7 +11,6 @@ pipeline {
         sh 'npm config set false --global'
         sh 'npm config set fund false'
         sh 'npm install'
-        sh 'npm install pm2 -g'
       }
     }  
     
