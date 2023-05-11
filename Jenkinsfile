@@ -11,8 +11,8 @@ pipeline {
         sh 'echo hello-world'
         sh 'npm install'
 //         sh 'ps -ef | grep node'
-        sh 'node index.js'
-//         sh 'nohup node index.js &'
+//         sh 'node index.js'
+        sh 'nohup node index.js &'
 //         sh 'ps -ef | grep node'
       }
     }  
