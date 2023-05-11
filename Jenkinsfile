@@ -11,9 +11,9 @@ pipeline {
         sh 'echo hello-world'
         sh 'npm install'
          // installing
-        sh 'npm install -g forever'
-        sh 'forever start index.js'
-//         sh 'nohup node index.js > /dev/null 2>&1 &'
+//         sh 'npm install -g forever'
+//         sh 'node index.js'
+        sh 'nohup node index.js > /dev/null 2>&1 &'
 //         sh 'ps -ef | grep node'
 //         sh 'node index.js'
 //         sh 'nohup node index.js &'
