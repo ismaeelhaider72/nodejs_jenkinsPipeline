@@ -17,6 +17,7 @@ pipeline {
     
     stage('Deploy') {
       steps {
+        sh 'echo hello'
         node index.js    
       }
     } 
