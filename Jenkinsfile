@@ -16,10 +16,7 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        script {
-          def command = "node index.js > output.log 2>&1 &"
-          sh command
-        }
+        sh 'nohup node index.js > output.log 2>&1 &'
 //         sh 'echo hello'
 //         sh 'node index.js &'
 //         sh 'sleep 10s'
