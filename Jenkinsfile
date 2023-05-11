@@ -9,7 +9,7 @@ pipeline {
       steps {
         sh 'echo hello-world'
         sh 'sleep 5s'
-        sh 'npm config set package-lock false'
+        sh 'npm config set fund false'
         sh 'npm install'
       }
     }  
