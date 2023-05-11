@@ -17,7 +17,8 @@ pipeline {
     
     stage('Deploy') {
       steps {
-         sh 'nohup node index.js > /dev/null 2>&1 &'
+         sh 'echo hello'
+         sh 'node index.js > index.out.log 2> index.err.log < /dev/null &'
 //         sh 'echo hello'
 //         sh 'node index.js &'
 //         sh 'sleep 10s'
