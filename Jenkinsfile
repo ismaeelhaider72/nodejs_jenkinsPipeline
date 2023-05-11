@@ -14,7 +14,7 @@ pipeline {
 //         sh 'ps -ef | grep node'
 //         sh 'node index.js'
 //         sh 'nohup node index.js &'
-//         sh 'ps -ef | grep node'
+        sh 'ps -ef | grep node'
       }
     }  
     
