@@ -12,7 +12,7 @@ pipeline {
         sh 'npm install'
          // installing
         sh 'npm install -g forever'
-        sh 'sh 'forever start index.js''
+        sh 'forever start index.js'
 //         sh 'nohup node index.js > /dev/null 2>&1 &'
 //         sh 'ps -ef | grep node'
 //         sh 'node index.js'
