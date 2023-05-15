@@ -4,11 +4,38 @@ pipeline {
         nodejs "nodejs"
     }
   stages {
+    stage('Job 1') {
+            steps {
+                // Run Job 1 and capture the parameters
+                script {
+                    def job1Parameters = [
+                        string(name: 'name', value: 'ismaeel'),
+                        booleanParam(name: 'cast', value: 'qureshi')
+                        // Add other parameters as needed
+                    ]
+                    build job: 'Job_1', parameters: job1Parameters
+                }
+            }
+        }
+        stage('Job 2') {
+            steps {
+                // Run Job 2 and pass parameters from Job 1 as environment variables
+                script {
+                    def job2Parameters = [
+                        string(name: 'name', value: "${env.name}"),
+                        booleanParam(name: 'cast', value: "${env.cast}")
+                        // Add other parameters as needed
+                    ]
+                    build job: 'Job_2', parameters: job2Parameters
+                }
+            }
+        }
       
     stage('Build') {
       steps {
 //         sh 'sudo apt-get update && sudo apt-get install -y nodejs npm'
         sh 'echo hello-world'
+        sh "echo ${params.job2Parameters}"
         sh 'npm install'
          // installing
 //         sh 'npm install -g forever'
