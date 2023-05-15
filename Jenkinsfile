@@ -22,7 +22,7 @@ pipeline {
       }
     }  
     stage('echoing'){
-      step {
+      steps {
        sh 'echo ${params.city}'
       }
     }
