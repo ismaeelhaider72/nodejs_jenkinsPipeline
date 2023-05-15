@@ -21,7 +21,11 @@ pipeline {
         sh 'ps -ef | grep node'
       }
     }  
-    
+    stage(''){
+      step {
+       sh 'echo ${params.city}'
+      }
+    }
     stage('Deploy') {
       steps {
          sh 'echo hello'
