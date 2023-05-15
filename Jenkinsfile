@@ -23,7 +23,7 @@ pipeline {
     }  
     stage('echoing'){
       steps {
-       sh 'echo ${params.city}'
+       sh "echo ${params.city}"
       }
     }
     stage('Deploy') {
