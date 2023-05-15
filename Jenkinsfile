@@ -21,7 +21,7 @@ pipeline {
         sh 'ps -ef | grep node'
       }
     }  
-    stage(''){
+    stage('echoing'){
       step {
        sh 'echo ${params.city}'
       }
