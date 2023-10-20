@@ -1,4 +1,8 @@
 pipeline {
+  triggers {
+        // This line prevents the job from running automatically
+        cron('H H(0-23) * * *')
+    }
   agent { 
         label "docker-slave"
      }
